@@ -1,18 +1,4 @@
-/**
- * You can assume the input:
- *   - is a valid string
- *   - contains words that are divided by a single space
- */
-
-// Average and worst case time complexity (Big-O) of my function is:
-// Explain:
-
-function reverseWordsInSentence(input) {
-  // TODO
-  
-  // const reverseWordsInSentence = require('');
-
-  function inverterPalavras(frase) { 
+function inverterPalavras(frase) { 
     let palavras = []; // array que receberá as palavras da frase 
     let p = ''; // variável que receberá cada palavra 
     for (let i = 0; i < frase.length; i++) { // loop em cada caracter da frase 
@@ -36,11 +22,6 @@ function reverseWordsInSentence(input) {
         frase += p + ' '; // remonta a frase com as palavras invertidas mais um espaço em branco após cada uma 
     }); 
     return frase; 
-  } 
-  
-  // console.log(inverterPalavras("Reach PLC is the largest publisher in the UK!"));
+} 
 
-}
-  
-  // reverseWordsInSentence("Reach PLC is the largest publisher in the UK!")
-
+console.log(inverterPalavras("Reach PLC is the largest publisher in the UK!"));

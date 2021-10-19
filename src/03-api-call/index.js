@@ -33,7 +33,28 @@ The expected output is:
     "url": "http://swapi.dev/api/people/1/"
 }
  */
-
+const fetch = require('node-fetch');
 module.exports = async function fetchLukeSkywalker() {
   // TODO
+  let data = await fetch('https://swapi.dev/api/people/1/')
+  .then(response => response.json())
+  .then(data => {
+    return data;
+  });
+return data;
+
+
+// function searchGet (url) {
+//     const request = new XMLHttpRequest()
+//     request.open('GET', url, false)
+//     request.send()
+//    return request.responseText
+// }
+// function mainGet (){
+//     data = searchGet("https://swapi.dev/api/people/1/")
+//     actualResult = JSON.parse(data)
+//     console.log(actualResult)
+// }
+// mainGet();
 };
+ 
